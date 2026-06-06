@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import "./cart.scss";
 import { useCartStore } from "../../stores/cartStore";
 import { CartItem, ProductData } from "../../models/products.model";
@@ -9,10 +9,12 @@ export const Cart = () => {
     const setCart = useCartStore(state => state.setCart);
     const clearCart = useCartStore(state => state.clearCart);
 
-    const cartTotal = cart.reduce((total, item) => {
-        const itemPrice = item.product?.price ?? 0;
-        return total + itemPrice * item.count;
-    }, 0);
+    const cartTotal: number = useMemo(() => {
+        return cart.reduce((total, item) => {
+            const itemPrice = item.product?.price ?? 0;
+            return total + itemPrice * item.count;
+        }, 0)
+    }, [cart]);
 
     const changeCount = (cartItem: CartItem, action: "ADD" | "REMOVE") => {
         let newCart: CartItem[];
