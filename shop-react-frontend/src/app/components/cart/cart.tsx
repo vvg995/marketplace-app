@@ -51,6 +51,10 @@ export const Cart = () => {
         setCart(cart.filter(i => i.product.id !== item.product.id));
     }
 
+    const createOrder = () => {
+        console.log(cart);
+    }
+
     return (
         <div className="cart-container">
             <h1 className="cart-title">Shopping Cart</h1>
@@ -101,7 +105,7 @@ export const Cart = () => {
 
                         <div className="cart-actions">
                             <button className="clear-cart" onClick={() => clearCart()}>Clear cart</button>
-                            <button className="create-order">Create order</button>
+                            <button className="create-order" onClick={() => createOrder()}>Create order</button>
                         </div>
                     </div>
                 </>
