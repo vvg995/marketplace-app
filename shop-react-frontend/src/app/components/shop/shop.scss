@@ -134,7 +134,7 @@
                     color: #fff;
                 }
 
-                .cart-decrese,
+                .cart-decrease,
                 .cart-increase {
                     flex: 0 0 auto;
                     width: 28px;
@@ -157,7 +157,7 @@
                     }
                 }
 
-                .cart-decrese::before {
+                .cart-decrease::before {
                     content: '−';
                 }
 
