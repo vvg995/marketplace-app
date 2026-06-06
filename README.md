@@ -35,7 +35,7 @@ The project simulates a real-world e-commerce system with authentication, produc
 - Authentication is fully working (JWT registration/login)
 - Product management is fully implemented: CRUD operations, image upload, category filtering, and pagination (backend + frontend)
 - My Products dashboard is complete: sellers can create, edit, and delete their listings
-- Shop browsing page is a placeholder (in progress)
+- Shop browsing page is is complete: buyers can add items to cart
 - Cart and order flow is under development
 
 ## Getting Started
